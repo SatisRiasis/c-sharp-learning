@@ -7,44 +7,43 @@ namespace _01_IntegerNumbers
         static void Main(string[] args)
         {
             //Initialization
-            Console.WriteLine("INITIALIZATION");
+            Console.WriteLine("===INITIALIZATION AND VARIABLES OUTPUT===");
+
             int firstNumber = 8;
-            Console.WriteLine($"firstNumber = {firstNumber}");
             int secondNumber = 67;
-            Console.WriteLine($"secondNumber = {secondNumber}");
             int thirdNumber = 67;
-            Console.WriteLine($"thirdNumber = {thirdNumber}");
-            long fileSize = 42000000000;
-            Console.WriteLine($"fileSize = {fileSize}");
+            long fileSize = 42000000000L;
             short fridgeT = -69;
-            Console.WriteLine($"fridgeT = {fridgeT}");
             byte colorGreen = 95;
-            Console.WriteLine($"colorGreen = {colorGreen}\n");
 
+            Console.WriteLine($"int firstNumber = {firstNumber}");
+            Console.WriteLine($"int secondNumber = {secondNumber}");
+            Console.WriteLine($"int thirdNumber = {thirdNumber}");
+            Console.WriteLine($"long fileSize = {fileSize}");
+            Console.WriteLine($"short fridgeT = {fridgeT}");
+            Console.WriteLine($"byte colorGreen = {colorGreen}\n");
 
-            //Arithmetics
-            Console.WriteLine("ARITHMETICS");
+            //Arithmetic
+            Console.WriteLine("===INTEGER ARITHMETIC===");
             Console.WriteLine($"firstNumber + secondNumber = {firstNumber + secondNumber}");
             Console.WriteLine($"fileSize - colorGreen = {fileSize - colorGreen}");
             Console.WriteLine($"fridgeT * firstNumber = {fridgeT * firstNumber}");
             Console.WriteLine($"fileSize / secondNumber = {fileSize / secondNumber}");
             Console.WriteLine($"fileSize % secondNumber = {fileSize % secondNumber}\n");
 
-
-            //Incr/Decr
-            Console.WriteLine("IN/DECREMENT");
+            //Increment/Decrement
+            Console.WriteLine("===INCREMENT AND DECREMENT===");
             Console.WriteLine($"firstNumber++ = {firstNumber++}");
-            Console.WriteLine($"firstNumber = {firstNumber}");
+            Console.WriteLine($"firstNumber after post-increment = {firstNumber}");
             Console.WriteLine($"++firstNumber = {++firstNumber}");
-            Console.WriteLine($"firstNumber = {firstNumber}");
+            Console.WriteLine($"firstNumber after pre-increment = {firstNumber}");
             Console.WriteLine($"firstNumber-- = {firstNumber--}");
-            Console.WriteLine($"firstNumber = {firstNumber}");
+            Console.WriteLine($"firstNumber after post-decrement = {firstNumber}");
             Console.WriteLine($"--firstNumber = {--firstNumber}");
-            Console.WriteLine($"firstNumber = {firstNumber}\n");
-
+            Console.WriteLine($"firstNumber after pre-decrement = {firstNumber}\n");
 
             //Comparison
-            Console.WriteLine("COMPARISON");
+            Console.WriteLine("===COMPARISON===");
             Console.WriteLine($"secondNumber > firstNumber = {secondNumber > firstNumber}");
             Console.WriteLine($"secondNumber < thirdNumber = {secondNumber < thirdNumber}");
             Console.WriteLine($"firstNumber == thirdNumber = {firstNumber == thirdNumber}");
@@ -52,36 +51,26 @@ namespace _01_IntegerNumbers
             Console.WriteLine($"thirdNumber >= secondNumber = {thirdNumber >= secondNumber}");
             Console.WriteLine($"firstNumber <= secondNumber = {firstNumber <= secondNumber}\n");
 
+            //Using Math class
+            Console.WriteLine("===MATH CLASS BASIC METHODS===");
+            Console.WriteLine($"Absolute value of fridgeT = {Math.Abs(fridgeT)}");
+            Console.WriteLine($"Minimum of firstNumber and fridgeT = {Math.Min(firstNumber, fridgeT)}");
+            Console.WriteLine($"Maximum of firstNumber and fridgeT = {Math.Max(firstNumber, fridgeT)}");
+            Console.WriteLine($"Squaring firstNumber = {Math.Pow(firstNumber, 2)}");
+            Console.WriteLine($"Taking the square root of firstNumber = {Math.Sqrt(firstNumber)}");
+            Console.WriteLine($"Sign of fridgeT = {Math.Sign(fridgeT)}");
+            Console.WriteLine($"Sign of fileSize = {Math.Sign(fileSize)}\n");
 
-            //Using Math
-            Console.WriteLine("MATH CLASS");
-            Console.WriteLine($"Math.Abs(fridgeT) = {Math.Abs(fridgeT)}");
-            Console.WriteLine($"Math.Min(firstNumber, fridgeT) = {Math.Min(firstNumber, fridgeT)}");
-            Console.WriteLine($"Math.Max(firstNumber, fridgeT) = {Math.Max(firstNumber, fridgeT)}");
-            Console.WriteLine($"Math.Pow(firstNumber, 2) = {Math.Pow(firstNumber, 2)}");
-            Console.WriteLine($"Math.Sqrt(firstNumber) = {Math.Sqrt(firstNumber)}");
-            Console.WriteLine($"Math.Sign(fridgeT) = {Math.Sign(fridgeT)}");
-            Console.WriteLine($"Math.Sign(fileSize) = {Math.Sign(fileSize)}\n");
+            //Explicit conversion
+            Console.WriteLine("===TYPE CASTING===");
 
-
-            //Casting
-            Console.WriteLine("TYPE CASTING");
             int intFS = (int)fileSize;
-            Console.WriteLine($"(int)fileSize = {intFS}");
+
+            Console.WriteLine($"Cast fileSize from long to int (data loss) = {intFS}");
+
             byte byteFS = (byte)fileSize;
-            Console.WriteLine($"(byte)fileSize = {byteFS}\n");
 
-
-            //User numeric summary
-            Console.WriteLine("USER NUMERIC SUMMARY");
-            int userAge = 22;
-            int yearsToRetirement = 65 - userAge;
-            Console.WriteLine($"userAge = {userAge}");
-            Console.WriteLine($"years to 30 = {30 - userAge}");
-            Console.WriteLine($"years to 65 = {yearsToRetirement}");
-            Console.WriteLine($"age to the power of 2 = {Math.Pow(userAge, 2)}");
-            Console.WriteLine($"the square root of age = {Math.Sqrt(userAge)}");
-            Console.WriteLine($"is legal = {userAge > 18}");
+            Console.WriteLine($"Cast fileSize from long to byte (data loss) = {byteFS}\n");
         }
     }
 }
